@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Generator</title>
+    <title>Funny Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Random Generator</h1>
-        <p>Click the button to generate a random joke!</p>
-        <button onclick="generateRandom()">Generate</button>
-        <p id="output"></p>
+        <h1>Welcome to the Funny Website!</h1>
+        <p>Click the button to see a random joke!</p>
+        <button onclick="tellJoke()">Make Me Laugh!</button>
+        <p id="joke"></p>
     </div>
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box">
+            <div class="message bot-message">Hello! How can I assist you today?</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message here..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <footer>
+        The website is currently having issues with the AI chat.
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
